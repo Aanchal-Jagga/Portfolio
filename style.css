@@ -62,6 +62,14 @@ html {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 5%;
+    top: 60px; /* ✅ Adjust below navbar */
+    z-index: 999;
+  }
+}
 
 .menu-toggle {
   display: none;
@@ -86,7 +94,7 @@ html {
   margin-top: 40px;
   max-width: 50%;
   margin-bottom: 100px;
-  
+
 }
 
 .hero-content h1 {
@@ -126,6 +134,31 @@ html {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 0, 87, 0.3);
 
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto; /* ✅ Let height be auto for stacking */
+    padding: 50px 5% 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-img {
+    margin-top: 30px;
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-img img,
+  .masked-photo {
+    width: 90%;
+    height: auto;
+  }
 }
 
 /* Sections */
@@ -171,6 +204,56 @@ h2 {
 .service-card:hover {
   transform: translateY(-5px);
 }
+@media (max-width: 768px) {
+  .services-grid,
+  .skills-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .skill-card,
+  .service-card {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-item {
+    width: 90%;
+  }
+
+  .content-box {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-form {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  section,
+  .container,
+  .timeline-container {
+    padding: 40px 20px;
+  }
+}
 
 /* Projects */
 .projects-grid {
@@ -185,10 +268,12 @@ h2 {
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 10px;
-  width: 530px;
-  height: 450px;
-  box-shadow: 10px 10px 10px #b266ff;
-  margin-left: 320px;
+  width: 100%;
+  max-width: 360px;
+  margin: 20px auto;
+  /* box-shadow: 10px 10px 10px #b266ff; */
+  border: 3px solid #b266ff;
+
 }
 
 .project-card h2{
@@ -251,7 +336,7 @@ h2 {
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 10px 10px 10px #b266ff;
+  /* box-shadow: 10px 10px 10px #b266ff; */
   overflow: hidden; /* Important */
   transition: transform 0.3s ease;
 
@@ -339,11 +424,12 @@ h2 {
 .contact-left {
   flex: 1;
   min-width: 300px;
-  margin-left: 20px;
+  margin-left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .contact-left h2 {
