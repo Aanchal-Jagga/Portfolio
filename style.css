@@ -256,14 +256,18 @@ h2 {
 }
 
 /* Projects */
-.projects-grid {
-  /* display: flex; */
-  gap: 30px;
-  /* flex-wrap: wrap; */
 
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  align-items: stretch;   /* 👈 important */
 }
 
-.project-card {
+
+/* .project-card {
   flex: 1 1 300px;
   background-color: #1e1e1e;
   padding: 20px;
@@ -272,9 +276,9 @@ h2 {
   max-width: 360px;
   margin: 20px auto;
   /* box-shadow: 10px 10px 10px #b266ff; */
-  border: 3px solid #b266ff;
+  /* border: 3px solid #b266ff;
 
-}
+} */ 
 
 .project-card h2{
   text-align: center;
@@ -329,7 +333,7 @@ h2 {
 .icon-button:hover {
   transform: scale(1.2);
 }
-.project-card {
+/* .project-card {
   position: relative;
   width: 530px;
   height: 450px;
@@ -337,17 +341,19 @@ h2 {
   padding: 20px;
   border-radius: 10px;
   /* box-shadow: 10px 10px 10px #b266ff; */
-  overflow: hidden; /* Important */
-  transition: transform 0.3s ease;
+  /* overflow: hidden; /* Important */
+  /* transition: transform 0.3s ease;
 
-}
+} */ 
 
 .project-card img {
-  height: 300px;
   width: 100%;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
+  
 }
+
 
 .project-card h2,
 .project-card p {
@@ -402,6 +408,20 @@ h2 {
   color: #b266ff;
 }
 
+.project-card {
+  position: relative;
+  background-color: #1e1e1e;
+  
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 340px;
+  min-height: 420px; 
+  display: flex;          /* 👇 makes internal layout stable */
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 /* Contact */
 .contact-section {
@@ -693,7 +713,7 @@ h2 {
   margin-bottom: 10px;
 }
 .container h2{
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   text-align: center;
 }
 
@@ -1034,3 +1054,41 @@ body {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
 } */
+
+
+/* Certifications */
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.cert-card {
+  background: #1e1e1e;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid #61e4f5;
+  transition: 0.3s;
+}
+.cert-card {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #61e4f5;
+}
+
+.cert-card h3 {
+  color: #61e4f5;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  color: #ccc;
+}

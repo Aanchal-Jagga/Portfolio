@@ -3,9 +3,10 @@ document.getElementById("mobile-menu").addEventListener("click", function () {
   const navLinks = document.querySelector(".nav-links");
   navLinks.classList.toggle("active");
 });
+
 // script.js
 
-// const text = "Aanchal Jagga, a Full Stack Web Developer.";
+// const text = "Aanchal Jagga, a Full Stack Web Developer.";  
 // const subtext = "A passionate developer who crafts scalable web apps and impactful user experiences.";
 
 // let i = 0, j = 0;
